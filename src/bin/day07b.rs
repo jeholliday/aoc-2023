@@ -283,7 +283,7 @@ mod tests {
                 Label::Ace,
                 Label::King,
                 Label::Queen,
-                Label::Joker,
+                Label::Ten,
             ],
         };
         assert_eq!(hand.get_strength(), Strength::OnePair);
@@ -294,8 +294,8 @@ mod tests {
                 Label::Ace,
                 Label::King,
                 Label::Queen,
-                Label::Joker,
                 Label::Ten,
+                Label::Nine,
             ],
         };
         assert_eq!(hand.get_strength(), Strength::HighCard);
