@@ -59,14 +59,22 @@ fn solve(input: &str) -> u64 {
         }
         println!();*/
     }
-    boxes.iter().enumerate().map(|(i, the_box)| {
-        the_box.iter().enumerate().map(|(j, (_, num))| {
-            let a = i + 1;
-            let b = j + 1;
-            let c = num;
-            a as u64 * b as u64 * *c as u64
-        }).sum::<u64>()
-    }).sum()
+    boxes
+        .iter()
+        .enumerate()
+        .map(|(i, the_box)| {
+            the_box
+                .iter()
+                .enumerate()
+                .map(|(j, (_, num))| {
+                    let a = i + 1;
+                    let b = j + 1;
+                    let c = num;
+                    a as u64 * b as u64 * *c as u64
+                })
+                .sum::<u64>()
+        })
+        .sum()
 }
 
 fn main() {

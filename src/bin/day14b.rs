@@ -208,7 +208,10 @@ fn solve(input: &str, cycles: usize) -> u64 {
         //println!("\nAfter 1 cycle {}", cycle);
         if let Some(cycle) = tilt_cycle(&mut platform) {
             if found_cycle.is_none() {
-                println!("Found cycle starting at {} with length {}", cycle.start, cycle.len);
+                println!(
+                    "Found cycle starting at {} with length {}",
+                    cycle.start, cycle.len
+                );
                 found_cycle = Some(cycle);
             }
         }
